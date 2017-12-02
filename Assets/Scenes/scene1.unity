@@ -200,6 +200,10 @@ MonoBehaviour:
   speed: 0.2
   limit: -30
   newX: 30
+  teleportBack: 0
+  randomVariance: 0
+  minRandom: 0
+  maxRandom: 0
 --- !u!1 &72144143
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,6 +999,10 @@ MonoBehaviour:
   speed: 0.2
   limit: -30
   newX: 30
+  teleportBack: 0
+  randomVariance: 0
+  minRandom: 0
+  maxRandom: 0
 --- !u!1 &820101574 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1932925920832804, guid: 6d2c59886f34ec146a5125e06d170697,
@@ -1099,10 +1107,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1042210889338240, guid: e2d9319fc3c397b4c8f2e5a2fe3711ae, type: 2}
-  speed: 1
+  firstInvokeTime: 0
   newX: 15
   minTime: 0.5
   maxTime: 4
+  randomVariance: 0
+  minPosRandom: 5
+  maxPosRandom: 5
 --- !u!4 &960250631
 Transform:
   m_ObjectHideFlags: 0
@@ -1295,6 +1306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 13
+  sparksParticles: {fileID: 0}
   jumpTimer: 0
 --- !u!1001 &1118238908
 Prefab:
@@ -5290,6 +5302,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &1523484216
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4565733300211138, guid: adee35880fbe2654c920be6767f5179d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.714411
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565733300211138, guid: adee35880fbe2654c920be6767f5179d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.03273424
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565733300211138, guid: adee35880fbe2654c920be6767f5179d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.05890102
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565733300211138, guid: adee35880fbe2654c920be6767f5179d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565733300211138, guid: adee35880fbe2654c920be6767f5179d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565733300211138, guid: adee35880fbe2654c920be6767f5179d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565733300211138, guid: adee35880fbe2654c920be6767f5179d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565733300211138, guid: adee35880fbe2654c920be6767f5179d, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1206217732112494, guid: adee35880fbe2654c920be6767f5179d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: adee35880fbe2654c920be6767f5179d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1598939193
 GameObject:
   m_ObjectHideFlags: 0
@@ -5318,6 +5376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  gameSpeed: 1
   scoreText: {fileID: 587247380}
 --- !u!4 &1598939195
 Transform:
@@ -5541,6 +5600,10 @@ MonoBehaviour:
   speed: 0.2
   limit: -30
   newX: 30
+  teleportBack: 0
+  randomVariance: 0
+  minRandom: 0
+  maxRandom: 0
 --- !u!1 &2053049085
 GameObject:
   m_ObjectHideFlags: 0
