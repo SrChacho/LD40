@@ -625,7 +625,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 299149517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: 0, y: -2.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1534,6 +1534,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: bbdcb63683dc36c458402f87873f24bc,
         type: 3}
+    - target: {fileID: 61850878469560726, guid: 6d2c59886f34ec146a5125e06d170697,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d2c59886f34ec146a5125e06d170697, type: 2}
   m_IsPrefabParent: 0
@@ -1579,6 +1584,11 @@ Prefab:
     - target: {fileID: 1932925920832804, guid: 6d2c59886f34ec146a5125e06d170697, type: 2}
       propertyPath: m_Name
       value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 61850878469560726, guid: 6d2c59886f34ec146a5125e06d170697,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -3.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d2c59886f34ec146a5125e06d170697, type: 2}
@@ -1785,23 +1795,23 @@ CompositeCollider2D:
   - m_Collider: {fileID: 2067025230}
     m_ColliderPaths:
     - - X: 104000000
-        Y: -35000000
+        Y: -32500000
       - X: -104000000
-        Y: -35000000
+        Y: -32500000
       - X: -104000000
-        Y: -45000000
+        Y: -42500000
       - X: 104000000
-        Y: -45000000
+        Y: -42500000
   - m_Collider: {fileID: 820101578}
     m_ColliderPaths:
     - - X: 304000000
-        Y: -35000000
+        Y: -32500000
       - X: 96000000
-        Y: -35000000
+        Y: -32500000
       - X: 96000000
-        Y: -45000000
+        Y: -42500000
       - X: 304000000
-        Y: -45000000
+        Y: -42500000
   - m_Collider: {fileID: 820101577}
     m_ColliderPaths:
     - - X: 304000000
@@ -1814,10 +1824,12 @@ CompositeCollider2D:
         Y: -45000000
   m_CompositePaths:
     m_Paths:
-    - - {x: -10.400001, y: -4.5}
+    - - {x: -10.400001, y: -3.25}
+      - {x: -10.400001, y: -4.25}
+      - {x: 9.6, y: -4.25}
+      - {x: 9.6, y: -4.5}
       - {x: 30.4, y: -4.5}
-      - {x: 30.4, y: -3.5}
-      - {x: -10.400001, y: -3.5}
+      - {x: 30.4, y: -3.25}
   m_VertexDistance: 0.1
 --- !u!50 &1200714591
 Rigidbody2D:
@@ -5536,7 +5548,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4236962786478282, guid: 935c05d03e0cb8242b376c1a3514cb5e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -2.35
       objectReference: {fileID: 0}
     - target: {fileID: 4236962786478282, guid: 935c05d03e0cb8242b376c1a3514cb5e, type: 2}
       propertyPath: m_LocalPosition.z
