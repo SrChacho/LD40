@@ -5,11 +5,14 @@ using UnityEngine;
 public class RandomSpawner : MonoBehaviour {
 
     public GameObject prefab;
-    public float speed = 1;
+    //public float speed = 1;
     //public float limit;
     public float newX;
     public float minTime = 0.3f;
     public float maxTime = 4f;
+    public bool randomVariance = false;
+    public float minPosRandom = 5;
+    public float maxPosRandom = 5;
 
     // Use this for initialization
     void Start () {
@@ -23,7 +26,14 @@ public class RandomSpawner : MonoBehaviour {
 
     void Spawn()
     {
-        Instantiate(prefab, new Vector3(Random.Range(newX - 5, newX + 5), transform.position.y, transform.position.z), transform.rotation);
+        if (!randomVariance)
+        {
+            transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+        }
+        else
+        {
+            Instantiate(prefab, new Vector3(Random.Range(newX - minPosRandom, newX + maxPosRandom), transform.position.y, transform.position.z), transform.rotation);
+        }
         Invoke("Spawn", Random.Range(minTime, maxTime));
     }
 
