@@ -7,9 +7,12 @@ public class Scrolling : MonoBehaviour {
     public float speed = 1;
     public float limit;
     public float newX;
-    
+    public bool randomVariance = false;
+    public float minRandom;
+    public float maxRandom;
+
     // Use this for initialization
-	void Start () {
+    void Start () {
 		
 	}
 	
@@ -25,7 +28,14 @@ public class Scrolling : MonoBehaviour {
 
         if(transform.position.x < limit)
         {
-            transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+            if (!randomVariance)
+            {
+                transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3(Random.Range(newX - minRandom, newX + maxRandom), transform.position.y, transform.position.z);
+            }
         }
 
     }

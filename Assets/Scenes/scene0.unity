@@ -200,6 +200,9 @@ MonoBehaviour:
   speed: 0.2
   limit: -30
   newX: 30
+  randomVariance: 0
+  minRandom: 0
+  maxRandom: 0
 --- !u!1 &72144143
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,6 +342,9 @@ MonoBehaviour:
   speed: 0.3
   limit: -15
   newX: 15
+  randomVariance: 1
+  minRandom: 2
+  maxRandom: 9
 --- !u!212 &245030251
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -785,6 +791,9 @@ MonoBehaviour:
   speed: 0.2
   limit: -30
   newX: 30
+  randomVariance: 0
+  minRandom: 0
+  maxRandom: 0
 --- !u!1 &820101574 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1932925920832804, guid: 6d2c59886f34ec146a5125e06d170697,
@@ -815,6 +824,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20, y: 1}
   m_EdgeRadius: 0
+--- !u!61 &820101578 stripped
+BoxCollider2D:
+  m_PrefabParentObject: {fileID: 61850878469560726, guid: 6d2c59886f34ec146a5125e06d170697,
+    type: 2}
+  m_PrefabInternal: {fileID: 1118238908}
 --- !u!1001 &949779235
 Prefab:
   m_ObjectHideFlags: 0
@@ -1146,27 +1160,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114706210458151014, guid: 6d2c59886f34ec146a5125e06d170697,
-        type: 2}
-      propertyPath: limit
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114706210458151014, guid: 6d2c59886f34ec146a5125e06d170697,
-        type: 2}
-      propertyPath: newX
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114706210458151014, guid: 6d2c59886f34ec146a5125e06d170697,
-        type: 2}
-      propertyPath: speed
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 212634276201880804, guid: 6d2c59886f34ec146a5125e06d170697,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: bbdcb63683dc36c458402f87873f24bc,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d2c59886f34ec146a5125e06d170697, type: 2}
   m_IsPrefabParent: 0
@@ -1219,16 +1212,6 @@ CompositeCollider2D:
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
-  - m_Collider: {fileID: 820101577}
-    m_ColliderPaths:
-    - - X: 300000000
-        Y: -35000000
-      - X: 100000000
-        Y: -35000000
-      - X: 100000000
-        Y: -45000000
-      - X: 300000000
-        Y: -45000000
   - m_Collider: {fileID: 2067025230}
     m_ColliderPaths:
     - - X: 100000000
@@ -1238,6 +1221,26 @@ CompositeCollider2D:
       - X: -100000000
         Y: -45000000
       - X: 100000000
+        Y: -45000000
+  - m_Collider: {fileID: 820101578}
+    m_ColliderPaths:
+    - - X: 300000000
+        Y: -35000000
+      - X: 100000000
+        Y: -35000000
+      - X: 100000000
+        Y: -45000000
+      - X: 300000000
+        Y: -45000000
+  - m_Collider: {fileID: 820101577}
+    m_ColliderPaths:
+    - - X: 300000000
+        Y: -35000000
+      - X: 100000000
+        Y: -35000000
+      - X: 100000000
+        Y: -45000000
+      - X: 300000000
         Y: -45000000
   m_CompositePaths:
     m_Paths:
@@ -1563,38 +1566,16 @@ MonoBehaviour:
   speed: 0.2
   limit: -30
   newX: 30
+  randomVariance: 0
+  minRandom: 0
+  maxRandom: 0
 --- !u!4 &2065440891 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4796261706732022, guid: 6d2c59886f34ec146a5125e06d170697,
     type: 2}
   m_PrefabInternal: {fileID: 1147549015}
---- !u!1 &2067025227 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1932925920832804, guid: 6d2c59886f34ec146a5125e06d170697,
+--- !u!61 &2067025230 stripped
+BoxCollider2D:
+  m_PrefabParentObject: {fileID: 61850878469560726, guid: 6d2c59886f34ec146a5125e06d170697,
     type: 2}
   m_PrefabInternal: {fileID: 1147549015}
---- !u!61 &2067025230
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2067025227}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 1
-  m_Offset: {x: 0, y: -4}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 20, y: 11.25}
-    newSize: {x: 0.24, y: 0.13}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 20, y: 1}
-  m_EdgeRadius: 0
