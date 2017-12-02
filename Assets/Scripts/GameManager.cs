@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
 	public static GameManager instance;
+
+    public float score = 0;
+    public Text scoreText;
     
     void Awake()
     {
@@ -20,4 +24,10 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void ChangeScore(float quantity)
+    {
+        score += quantity;
+        scoreText.text = score.ToString("0000");
+    }
 }
