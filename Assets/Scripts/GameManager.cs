@@ -31,4 +31,10 @@ public class GameManager : MonoBehaviour {
         score += quantity;
         scoreText.text = score.ToString("0000");
     }
+
+    public void GameOver()
+    {
+        print("Game Over");
+    }
+
 }

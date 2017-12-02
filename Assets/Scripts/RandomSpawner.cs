@@ -7,6 +7,7 @@ public class RandomSpawner : MonoBehaviour {
     public GameObject prefab;
     //public float speed = 1;
     //public float limit;
+    public float firstInvokeTime = 0;
     public float newX;
     public float minTime = 0.3f;
     public float maxTime = 4f;
@@ -16,7 +17,7 @@ public class RandomSpawner : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Spawn();
+        Invoke("Spawn", firstInvokeTime);
 	}
 	
 	// Update is called once per frame
@@ -28,7 +29,7 @@ public class RandomSpawner : MonoBehaviour {
     {
         if (!randomVariance)
         {
-            transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+            Instantiate(prefab, new Vector3(newX, transform.position.y, transform.position.z), transform.rotation);
         }
         else
         {
