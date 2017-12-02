@@ -8,7 +8,7 @@ public class RandomSpawner : MonoBehaviour {
     public float speed = 1;
     //public float limit;
     public float newX;
-    public float minTime = 0.5f;
+    public float minTime = 0.3f;
     public float maxTime = 4f;
 
     // Use this for initialization
