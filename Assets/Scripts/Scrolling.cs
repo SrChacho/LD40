@@ -7,6 +7,7 @@ public class Scrolling : MonoBehaviour {
     public float speed = 1;
     public float limit;
     public float newX;
+    public bool teleportBack = false;
     public bool randomVariance = false;
     public float minRandom;
     public float maxRandom;
@@ -26,7 +27,7 @@ public class Scrolling : MonoBehaviour {
 
         transform.position = new Vector3(transform.position.x - speed * GameManager.instance.gameSpeed, transform.position.y, transform.position.z);
 
-        if(transform.position.x < limit)
+        if(transform.position.x < limit && teleportBack)
         {
             if (!randomVariance)
             {

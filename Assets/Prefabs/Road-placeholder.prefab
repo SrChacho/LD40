@@ -81,6 +81,7 @@ MonoBehaviour:
   speed: 0.2
   limit: -20
   newX: 20
+  teleportBack: 1
   randomVariance: 0
   minRandom: 0
   maxRandom: 0

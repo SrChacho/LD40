@@ -55,7 +55,8 @@ MonoBehaviour:
   speed: 0.3
   limit: -15
   newX: 25
-  randomVariance: 1
+  teleportBack: 0
+  randomVariance: 0
   minRandom: 1
   maxRandom: 40
 --- !u!212 &212602023047107324
