@@ -9,6 +9,9 @@ public class Player : MonoBehaviour {
     public float jumpForce = 1;
 
     private Rigidbody2D rb2d;
+    private bool holdingJump = false;
+    [SerializeField]
+    private float jumpTimer;
 
     private void Awake()
     {
@@ -25,25 +28,43 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        // SALTO
+
         if (Input.GetButtonDown("Jump") && Grounded())
         {
-            print("Jump");
+            holdingJump = true;
             rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            jumpTimer = 0.25f;
         }
 
-	}
+        if (Input.GetButton("Jump") && holdingJump)
+        {
+            
+            if(jumpTimer >= 0)
+            {
+                jumpTimer -= Time.deltaTime;
+                rb2d.AddForce(Vector2.up * (jumpForce * 0.03f), ForceMode2D.Impulse);
+            }
+        }
+        if (Input.GetButtonUp("Jump"))
+        {
+            holdingJump = false;
+        }
 
+
+    }
+
+    // FUNCION PARA COMPROBAR GROUNDED
     private bool Grounded()
     {
         if(Physics2D.Raycast(transform.position, Vector2.down, 1.5f))
         {
-            print("Choca");
             return true;
         }
         else
         {
-            print("No choca");
             return false;
         }
     }
+
 }
