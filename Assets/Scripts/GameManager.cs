@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
 	public static GameManager instance;
 
     public float score = 0;
+    public float gameSpeed = 1;
     public Text scoreText;
     
     void Awake()

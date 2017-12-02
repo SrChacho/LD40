@@ -34,7 +34,7 @@ public class Collectible : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        transform.position = new Vector3(transform.position.x - speed, transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x - speed * GameManager.instance.gameSpeed, transform.position.y, transform.position.z);
     }
 
 }
