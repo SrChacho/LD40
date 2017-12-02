@@ -341,10 +341,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.3
   limit: -15
-  newX: 15
+  newX: 17
   randomVariance: 1
-  minRandom: 2
-  maxRandom: 9
+  minRandom: 1
+  maxRandom: 12
 --- !u!212 &245030251
 SpriteRenderer:
   m_ObjectHideFlags: 0
