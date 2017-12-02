@@ -51,7 +51,6 @@ public class Player : MonoBehaviour {
             holdingJump = false;
         }
 
-
     }
 
     // FUNCION PARA COMPROBAR GROUNDED
