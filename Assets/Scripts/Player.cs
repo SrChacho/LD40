@@ -59,19 +59,25 @@ public class Player : MonoBehaviour {
             holdingJump = false;
         }
 
-        if (Input.GetButtonDown("Crouch") && Grounded())
+        if (Input.GetButtonDown("Crouch") )
         {
-            holdingCrouch = true;
-            //rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            //crouchTimer = 0.25f;
-            animator.SetBool("Crouching", true);
-            sparksParticles.Play();
+            rb2d.gravityScale = 9;
+            if (Grounded())
+            {
+                holdingCrouch = true;
+                //rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                //crouchTimer = 0.25f;
+                animator.SetBool("Crouching", true);
+                sparksParticles.Play();
+            }
         }
+
         if (Input.GetButtonUp("Crouch"))
         {
             holdingCrouch = false;
             animator.SetBool("Crouching", false);
             sparksParticles.Stop();
+            rb2d.gravityScale = 4;
         }
 
     }
