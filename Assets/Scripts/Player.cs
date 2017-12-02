@@ -35,7 +35,7 @@ public class Player : MonoBehaviour {
 	void Update () {
 
         // SALTO
-        if (Input.GetButtonDown("Jump") && Grounded())
+        if (Input.GetButtonDown("Jump") && Grounded() && !holdingCrouch)
         {
 
             holdingJump = true;
