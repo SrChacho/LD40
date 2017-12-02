@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e30bc2b7e19a65c4fae37bb6cf4f9368
-timeCreated: 1512247917
+timeCreated: 1512251911
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -42,14 +42,14 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0.04
   textureType: 8
   textureShape: 1
   maxTextureSizeSet: 0
@@ -65,11 +65,55 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
-    physicsShape: []
+    outline:
+    - - {x: 27.332428, y: 109.24916}
+      - {x: -90.25586, y: 40.18254}
+      - {x: -203.06267, y: 13.548286}
+      - {x: -369.7475, y: -47.734177}
+      - {x: -320.52164, y: -71.70754}
+      - {x: 324.45166, y: -67.95338}
+      - {x: 327.45508, y: 30.98668}
+      - {x: 232.64093, y: 81.46837}
+    physicsShape:
+    - - {x: -358.1593, y: -66.69622}
+      - {x: 323.70087, y: -60.369053}
+      - {x: 328.47498, y: 31.199219}
+      - {x: 232.48169, y: 85.22252}
+      - {x: 108.23251, y: 102.491684}
+      - {x: -0.27252197, y: 101.740845}
+      - {x: -135.60823, y: 3.1459274}
+      - {x: -207.95338, y: 9.760826}
+      - {x: -364.03995, y: -46.727516}
   spritePackingTag: 
   userData: 
   assetBundleName: 
