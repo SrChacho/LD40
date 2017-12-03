@@ -16,7 +16,5 @@ public float newX = 20;
         if(transform.position.x < limit){
             transform.position = new Vector3(newX, transform.position.y, transform.position.z);
         }
-
-
     }
 }

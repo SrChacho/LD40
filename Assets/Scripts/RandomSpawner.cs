@@ -40,17 +40,4 @@ public class RandomSpawner : MonoBehaviour {
             Invoke("Spawn", Random.Range(minTime, maxTime));
         }
     }
-
-    /*
-    private void FixedUpdate()
-    {
-        transform.position = new Vector3(transform.position.x - speed, transform.position.y, transform.position.z);
-
-        if (transform.position.x < limit)
-        {
-            Instantiate(prefab, new Vector3(Random.Range(newX - 5, newX + 5), transform.position.y, transform.position.z), transform.rotation);
-            Destroy(gameObject);
-        }
-    }*/
-
 }

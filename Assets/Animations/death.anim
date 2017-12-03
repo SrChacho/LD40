@@ -24,11 +24,7 @@ AnimationClip:
         tangentMode: 0
       - serializedVersion: 2
         time: 1
-<<<<<<< HEAD
-        value: {x: 0, y: 0, z: 368.691}
-=======
         value: {x: 0, y: 0, z: 385}
->>>>>>> bf855e113f4f81efdcd741741cea956cfce52211
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0

@@ -37,18 +37,6 @@ public class Enemy : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Player" )
         {
-<<<<<<< HEAD
-            if(this.gameObject.name == "road-roller(Clone)"){
-                //Si me choco con la apisonadora y estoy tumbado la esquivo
-                if(Player.instance.holdingCrouch == false){
-                    GameManager.instance.GameOver();
-                }
-            }else{
-                //Colisión con el resto de enemigos
-                GameManager.instance.GameOver();
-            }
-            
-=======
             GameObject explosion = Instantiate(explosionPrefab);
             explosion.transform.position = collision.transform.position;
             if (!Player.instance.inmune)
@@ -60,7 +48,6 @@ public class Enemy : MonoBehaviour {
         if (collision.gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
->>>>>>> bf855e113f4f81efdcd741741cea956cfce52211
         }
     }
 
