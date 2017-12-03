@@ -6304,7 +6304,7 @@ MonoBehaviour:
   gameSpeed: 1
   scoreText: {fileID: 587247380}
   cup: {fileID: 1206217732112494, guid: adee35880fbe2654c920be6767f5179d, type: 2}
-  gameOverMenu: {fileID: 0}
+  gameOverMenu: {fileID: 671031559}
 --- !u!4 &1598939195
 Transform:
   m_ObjectHideFlags: 0
