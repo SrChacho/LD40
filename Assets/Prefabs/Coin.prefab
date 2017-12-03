@@ -81,6 +81,8 @@ MonoBehaviour:
   speed: 0.2
   limit: -10
   givenScore: 1
+  pickupSound: {fileID: 8300000, guid: ef67c8d54bc93444883d8fc5bd5a04da, type: 3}
+  audioVolume: 1.25
 --- !u!212 &212192145683656982
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -7,10 +7,12 @@ public class Collectible : MonoBehaviour {
     public float speed = 0.2f;
     public float limit = -10;
     public float givenScore = 1;
+    public AudioClip pickupSound;
+    public float audioVolume = 1;
 
     // Use this for initialization
     void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
@@ -28,6 +30,7 @@ public class Collectible : MonoBehaviour {
         if(collision.tag == "Player")
         {
             GameManager.instance.ChangeScore(givenScore);
+            collision.GetComponent<AudioSource>().PlayOneShot(pickupSound, audioVolume);
             Destroy(gameObject);
         }
     }

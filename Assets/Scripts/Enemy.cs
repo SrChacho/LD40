@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-	// Use this for initialization
+	public GameObject explosionPrefab;
+    
+    // Use this for initialization
 	void Start () {
 		
 	}
@@ -19,6 +21,8 @@ public class Enemy : MonoBehaviour {
         if(collision.gameObject.tag == "Player")
         {
             GameManager.instance.GameOver();
+            GameObject explosion = Instantiate(explosionPrefab);
+            explosion.transform.position = collision.transform.position;
         }
     }
 
