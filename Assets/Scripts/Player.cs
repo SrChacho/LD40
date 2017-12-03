@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
     public static Player instance;
     public float jumpForce = 1;
     public ParticleSystem sparksParticles;
+    public ParticleSystem inmuneParticles;
     public AudioClip jumpSound;
     public bool inmune = false;
 
@@ -102,12 +103,20 @@ public class Player : MonoBehaviour {
         }
     }
 
-    public IEnumerator MakeInmune(float time)
+    public void MakeInmune(float time)
     {
         inmune = true;
-        yield return new WaitForSeconds(time);
+        MusicManager.instance.ChangeMusic(MusicManager.instance.inmuneMusic);
+        inmuneParticles.Play();
+        print("Inmune started for " + time);
+        Invoke("FinishInmune", time);
+    }
+    void FinishInmune()
+    {
         inmune = false;
-        yield return null;
+        MusicManager.instance.ChangeMusic(MusicManager.instance.levelMusic);
+        inmuneParticles.Stop();
+        print("Inmune finished");
     }
 
 }
