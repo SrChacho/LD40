@@ -37,9 +37,12 @@ public class Enemy : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Player")
         {
-            GameManager.instance.GameOver();
             GameObject explosion = Instantiate(explosionPrefab);
             explosion.transform.position = collision.transform.position;
+            if (!Player.instance.inmune)
+            {
+                GameManager.instance.GameOver();
+            }
         }
 
         if (collision.gameObject.tag == "Enemy")

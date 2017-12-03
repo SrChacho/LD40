@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
     public float jumpForce = 1;
     public ParticleSystem sparksParticles;
     public AudioClip jumpSound;
+    public bool inmune = false;
 
     private Rigidbody2D rb2d;
     private Animator animator;
@@ -99,6 +100,14 @@ public class Player : MonoBehaviour {
             animator.SetBool("Grounded", false);
             return false;
         }
+    }
+
+    public IEnumerator MakeInmune(float time)
+    {
+        inmune = true;
+        yield return new WaitForSeconds(time);
+        inmune = false;
+        yield return null;
     }
 
 }

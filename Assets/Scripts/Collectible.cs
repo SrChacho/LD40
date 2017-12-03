@@ -31,6 +31,7 @@ public class Collectible : MonoBehaviour {
         {
             GameManager.instance.ChangeScore(givenScore);
             collision.transform.parent.GetComponent<AudioSource>().PlayOneShot(pickupSound, audioVolume);
+            GameManager.instance.gameSpeed += 0.025f;
             Destroy(gameObject);
         }
     }

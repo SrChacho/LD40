@@ -382,6 +382,7 @@ MonoBehaviour:
   jumpForce: 13
   sparksParticles: {fileID: 1338736357}
   jumpSound: {fileID: 8300000, guid: 92e780c8a2b05c349b3c0e410d4068ba, type: 3}
+  inmune: 0
   jumpTimer: 0
 --- !u!50 &129120554
 Rigidbody2D:
@@ -1084,8 +1085,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 409460506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 257.5, y: 145, z: 0}
-  m_LocalScale: {x: 0.40234375, y: 0.40234375, z: 0.40234375}
+  m_LocalPosition: {x: 254, y: 143, z: 0}
+  m_LocalScale: {x: 0.39687496, y: 0.39687496, z: 0.39687496}
   m_Children:
   - {fileID: 1354793256}
   - {fileID: 587247379}
@@ -1349,7 +1350,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 587247378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -610, y: 340.38834, z: 0}
+  m_LocalPosition: {x: -610.00006, y: 340.315, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 409460510}
@@ -1955,6 +1956,7 @@ MonoBehaviour:
   jumpForce: 13
   sparksParticles: {fileID: 0}
   jumpSound: {fileID: 0}
+  inmune: 0
   jumpTimer: 0
 --- !u!1001 &1118238908
 Prefab:
@@ -2394,6 +2396,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1333563483}
   - component: {fileID: 1333563482}
+  - component: {fileID: 1333563484}
+  - component: {fileID: 1333563485}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -2494,6 +2498,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1333563484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1333563481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168d89503a9f69c4cad0a9a2c21b54de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelMusic: {fileID: 0}
+  inmuneMusic: {fileID: 0}
+--- !u!114 &1333563485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1333563481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168d89503a9f69c4cad0a9a2c21b54de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelMusic: {fileID: 8300000, guid: ad911d5bf59b5764597ea8b4ddad420b, type: 3}
+  inmuneMusic: {fileID: 0}
 --- !u!1 &1338736354
 GameObject:
   m_ObjectHideFlags: 0
@@ -5919,7 +5949,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1354793255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 340.38834, z: 0}
+  m_LocalPosition: {x: 0, y: 340.315, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 409460510}
