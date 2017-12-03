@@ -107,6 +107,7 @@ public class Player : MonoBehaviour {
 
     public void MakeInmune(float time)
     {
+        CancelInvoke("FinishInmune");
         inmune = true;
         MusicManager.instance.ChangeMusic(MusicManager.instance.inmuneMusic);
         inmuneParticles.Play();
