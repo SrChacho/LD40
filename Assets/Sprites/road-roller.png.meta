@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 5432833f043eb464fb84caa40b801125
-timeCreated: 1512248670
-=======
-guid: 163acede20608eb4baf1b0c7a8662c3a
-timeCreated: 1512248552
->>>>>>> cdfcd2e0e7a16a1cb2a2f4008e3ea12a7ca5b829
+timeCreated: 1512312601
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -13,7 +8,7 @@ TextureImporter:
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -41,7 +36,7 @@ TextureImporter:
     mipBias: -1
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -54,7 +49,7 @@ TextureImporter:
   spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0.01
   textureType: 8
   textureShape: 1
   maxTextureSizeSet: 0
@@ -101,7 +96,15 @@ TextureImporter:
     serializedVersion: 2
     sprites: []
     outline: []
-    physicsShape: []
+    physicsShape:
+    - - {x: -319.0085, y: 75.85623}
+      - {x: -180.04178, y: -19.516998}
+      - {x: -105.04529, y: 32.483734}
+      - {x: 49.88739, y: 30.33075}
+      - {x: 168.46368, y: -35.470367}
+      - {x: 293.21173, y: 35.550293}
+      - {x: 200.78827, y: 244.77051}
+      - {x: -282.63525, y: 198.466}
   spritePackingTag: 
   userData: 
   assetBundleName: 

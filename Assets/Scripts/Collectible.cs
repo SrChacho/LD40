@@ -30,7 +30,7 @@ public class Collectible : MonoBehaviour {
         if(collision.tag == "Player")
         {
             GameManager.instance.ChangeScore(givenScore);
-            collision.GetComponent<AudioSource>().PlayOneShot(pickupSound, audioVolume);
+            collision.transform.parent.GetComponent<AudioSource>().PlayOneShot(pickupSound, audioVolume);
             Destroy(gameObject);
         }
     }
