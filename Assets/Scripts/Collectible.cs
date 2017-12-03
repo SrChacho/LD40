@@ -38,16 +38,6 @@ public class Collectible : MonoBehaviour {
     void Start () {
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-
-        if (transform.position.x < limit)
-        {
-            Destroy(gameObject);
-        }
-
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -67,8 +57,13 @@ public class Collectible : MonoBehaviour {
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
+        if (transform.position.x < limit)
+        {
+            Destroy(gameObject);
+        }
+
         transform.position = new Vector3(transform.position.x - speed * GameManager.instance.gameSpeed, transform.position.y, transform.position.z);
     }
 

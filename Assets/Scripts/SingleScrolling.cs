@@ -8,7 +8,7 @@ public float speed = 1;
 public float limit = -20;
 public float newX = 20;
 
- private void FixedUpdate()
+ private void Update()
     {
         //constantly moving
         transform.position = new Vector3(transform.position.x - speed * GameManager.instance.gameSpeed, transform.position.y, transform.position.z);
