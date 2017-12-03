@@ -12,7 +12,7 @@ public class Player : MonoBehaviour {
     private Rigidbody2D rb2d;
     private Animator animator;
     private bool holdingJump = false;
-    private bool holdingCrouch = false;
+    public bool holdingCrouch = false;
     [SerializeField]
     private float jumpTimer;
 
@@ -69,6 +69,7 @@ public class Player : MonoBehaviour {
                 //crouchTimer = 0.25f;
                 animator.SetBool("Crouching", true);
                 sparksParticles.Play();
+
             }
         }
 
@@ -78,6 +79,7 @@ public class Player : MonoBehaviour {
             animator.SetBool("Crouching", false);
             sparksParticles.Stop();
             rb2d.gravityScale = 4;
+
         }
 
     }

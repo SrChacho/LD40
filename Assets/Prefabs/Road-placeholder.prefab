@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4796261706732022}
   - component: {fileID: 212634276201880804}
-  - component: {fileID: 114706210458151014}
   - component: {fileID: 61850878469560726}
+  - component: {fileID: 114488363159325688}
   m_Layer: 0
   m_Name: Road-placeholder
   m_TagString: Untagged
@@ -67,7 +67,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114706210458151014
+--- !u!114 &114488363159325688
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -75,16 +75,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1932925920832804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84da9823a8182204195d84fe8de3984e, type: 3}
+  m_Script: {fileID: 11500000, guid: 255583c35d6cb43408060726f4f0b4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
   limit: -20
   newX: 20
-  teleportBack: 1
-  randomVariance: 0
-  minRandom: 0
-  maxRandom: 0
 --- !u!212 &212634276201880804
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -118,7 +114,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: bbdcb63683dc36c458402f87873f24bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

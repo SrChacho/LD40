@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -10,6 +11,9 @@ public class GameManager : MonoBehaviour {
     public float score = 0;
     public float gameSpeed = 1;
     public Text scoreText;
+
+    public GameObject gameOverPanel;
+    public Text gameOverText;
     public GameObject cup;
     
     void Awake()
@@ -46,6 +50,23 @@ public class GameManager : MonoBehaviour {
 
     void StopGame(){
         gameSpeed = 0;
+
+        //Mostrar por pantalla el resultado y el boton para reintentar
+        ShowScore();
     }
 
+    void ShowScore(){
+        float totalScore = 0;
+
+        //Tiempo total desde que el nivel empezó
+        int timeScore = (int)Time.timeSinceLevelLoad;
+        totalScore = timeScore / 10 + score * 10;
+        gameOverText.text = "your score: " + totalScore;
+        gameOverPanel.SetActive(true);
+
+    }
+
+    public void Restart(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

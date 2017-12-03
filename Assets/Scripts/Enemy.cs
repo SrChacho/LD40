@@ -16,9 +16,18 @@ public class Enemy : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player" )
         {
-            GameManager.instance.GameOver();
+            if(this.gameObject.name == "road-roller(Clone)"){
+                //Si me choco con la apisonadora y estoy tumbado la esquivo
+                if(Player.instance.holdingCrouch == false){
+                    GameManager.instance.GameOver();
+                }
+            }else{
+                //Colisión con el resto de enemigos
+                GameManager.instance.GameOver();
+            }
+            
         }
     }
 
