@@ -8,8 +8,8 @@ public class ObjectsSpawner : MonoBehaviour {
 	public Vector2[] positions; 
     public float firstInvokeTime = 0;
     public float newX;
-    public float minTime = 0.3f;
-    public float maxTime = 4f;
+    public float minTime = 1.2f;
+    public float maxTime = 5f;
     public bool randomVariance = false;
     public float minPosRandom = 5;
     public float maxPosRandom = 5;
@@ -28,6 +28,12 @@ public class ObjectsSpawner : MonoBehaviour {
 
     void Spawn()
     {
-		Instantiate(objects[Random.Range(0, objects.Count)], positions[Random.Range(0, positions.Length)], this.transform.rotation);
+		float chance = Random.Range(0f, 1f);
+		if(chance < 0.1f){
+			Instantiate(objects[0], positions[Random.Range(0, positions.Length)], this.transform.rotation);
+		}else{
+			Instantiate(objects[Random.Range(1, objects.Count)], positions[Random.Range(0, positions.Length)], this.transform.rotation);
+		}
+		
 	}
 }
