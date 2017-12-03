@@ -81,7 +81,7 @@ MonoBehaviour:
   speed: 0.2
   limit: -10
   givenScore: 1
-  pickupSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: ef67c8d54bc93444883d8fc5bd5a04da, type: 3}
   audioVolume: 1
   itemType: 1
 --- !u!212 &212922525989999718
@@ -117,7 +117,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 6eede9c40e310c54794739f3fb750c1f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -34,4 +34,6 @@ Icon?
 ehthumbs.db
 Thumbs.db
 .vs
+.vs/LD40/v15/Server/sqlite3/storage.ide
+.vs/LD40/v15/Server/sqlite3/storage.ide-shm
 .vs/LD40/v15/Server/sqlite3/storage.ide-wal
