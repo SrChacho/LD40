@@ -61,7 +61,7 @@ public class Collectible : MonoBehaviour {
             }
             else if(itemType == ItemType.inmune)
             {
-                Player.instance.MakeInmune(5.7f);
+                Player.instance.MakeInmune(5.85f);
             }
             
             Destroy(gameObject);
