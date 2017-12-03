@@ -18,11 +18,21 @@ public class MusicManager : MonoBehaviour {
     
     // Use this for initialization
 	void Start () {
-		
+
+        musicSource = GetComponent<AudioSource>();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    public void ChangeMusic(AudioClip music)
+    {
+        musicSource.Stop();
+        musicSource.clip = music;
+        musicSource.Play();
+    }
+
 }

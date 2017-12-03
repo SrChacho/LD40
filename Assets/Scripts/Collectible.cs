@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour {
 
+    public enum ItemType
+    {
+        coin,
+        inmune
+    };
+
     public float speed = 0.2f;
     public float limit = -10;
     public float givenScore = 1;
     public AudioClip pickupSound;
     public float audioVolume = 1;
+    public ItemType itemType;
 
     private void Awake()
     {
         //Comprobar si esta muy cerca de otro enemigo
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject item in enemies)
+        GameObject[] collectibles = GameObject.FindGameObjectsWithTag("Collectible");
+        foreach (GameObject item in collectibles)
         {
             if (!item.Equals(gameObject))
             {
@@ -46,9 +53,17 @@ public class Collectible : MonoBehaviour {
     {
         if(collision.tag == "Player")
         {
-            GameManager.instance.ChangeScore(givenScore);
-            collision.transform.parent.GetComponent<AudioSource>().PlayOneShot(pickupSound, audioVolume);
-            GameManager.instance.gameSpeed += 0.025f;
+            if(itemType == ItemType.coin)
+            {
+                GameManager.instance.ChangeScore(givenScore);
+                collision.transform.parent.GetComponent<AudioSource>().PlayOneShot(pickupSound, audioVolume);
+                GameManager.instance.gameSpeed += 0.025f;
+            }
+            else if(itemType == ItemType.inmune)
+            {
+                Player.instance.MakeInmune(5.85f);
+            }
+            
             Destroy(gameObject);
         }
     }
