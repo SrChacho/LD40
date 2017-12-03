@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4236962786478282}
   - component: {fileID: 212602023047107324}
+  - component: {fileID: 114528340892911122}
   - component: {fileID: 114709931113857080}
   - component: {fileID: 60533247477584484}
-  - component: {fileID: 114528340892911122}
+  - component: {fileID: 82891864578620972}
   m_Layer: 2
   m_Name: Car
   m_TagString: Enemy
@@ -76,6 +77,86 @@ PolygonCollider2D:
       - {x: -1.3560823, y: 0.031459272}
       - {x: -2.0795338, y: 0.09760826}
       - {x: -3.6403995, y: -0.46727514}
+--- !u!82 &82891864578620972
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1464724698796146}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4d732c2fbbf524d42bda452ec8fa201e, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 35
+  MaxDistance: 40
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114528340892911122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -87,6 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ede16f4ab83ebb4aa91f7a892187ccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 1169745699030892, guid: a292ca1f90e6a794bac10380eef87809,
+    type: 2}
 --- !u!114 &114709931113857080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.4
-  limit: -15
+  limit: -25
   newX: 25
 --- !u!212 &212602023047107324
 SpriteRenderer:

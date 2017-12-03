@@ -27,15 +27,18 @@ public class RandomSpawner : MonoBehaviour {
 
     void Spawn()
     {
-        if (!randomVariance)
+        if(GameManager.instance.gameSpeed > 0)
         {
-            Instantiate(prefab, new Vector3(newX, transform.position.y, transform.position.z), transform.rotation);
+            if (!randomVariance)
+            {
+                Instantiate(prefab, new Vector3(newX, transform.position.y, transform.position.z), transform.rotation);
+            }
+            else
+            {
+                Instantiate(prefab, new Vector3(Random.Range(newX - minPosRandom, newX + maxPosRandom), transform.position.y, transform.position.z), transform.rotation);
+            }
+            Invoke("Spawn", Random.Range(minTime, maxTime));
         }
-        else
-        {
-            Instantiate(prefab, new Vector3(Random.Range(newX - minPosRandom, newX + maxPosRandom), transform.position.y, transform.position.z), transform.rotation);
-        }
-        Invoke("Spawn", Random.Range(minTime, maxTime));
     }
 
     /*

@@ -4,13 +4,32 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-	// Use this for initialization
+	public GameObject explosionPrefab;
+    
+    // Use this for initialization
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Awake()
+    {
+        //Comprobar si esta muy cerca de otro enemigo
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject item in enemies)
+        {
+            if(!item.Equals(gameObject))
+            {
+                if (transform.position.x > item.transform.position.x - 12 && transform.position.x < item.transform.position.x + 12)
+                {
+                    print("Spawned too close");
+                    Destroy(gameObject);
+                }
+            }
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
@@ -18,6 +37,7 @@ public class Enemy : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Player" )
         {
+<<<<<<< HEAD
             if(this.gameObject.name == "road-roller(Clone)"){
                 //Si me choco con la apisonadora y estoy tumbado la esquivo
                 if(Player.instance.holdingCrouch == false){
@@ -28,6 +48,19 @@ public class Enemy : MonoBehaviour {
                 GameManager.instance.GameOver();
             }
             
+=======
+            GameObject explosion = Instantiate(explosionPrefab);
+            explosion.transform.position = collision.transform.position;
+            if (!Player.instance.inmune)
+            {
+                GameManager.instance.GameOver();
+            }
+        }
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+>>>>>>> bf855e113f4f81efdcd741741cea956cfce52211
         }
     }
 
