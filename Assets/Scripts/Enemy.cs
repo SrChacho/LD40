@@ -10,9 +10,26 @@ public class Enemy : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Awake()
+    {
+        //Comprobar si esta muy cerca de otro enemigo
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject item in enemies)
+        {
+            if(!item.Equals(gameObject))
+            {
+                if (transform.position.x > item.transform.position.x - 12 && transform.position.x < item.transform.position.x + 12)
+                {
+                    print("Spawned too close");
+                    Destroy(gameObject);
+                }
+            }
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
@@ -23,6 +40,11 @@ public class Enemy : MonoBehaviour {
             GameManager.instance.GameOver();
             GameObject explosion = Instantiate(explosionPrefab);
             explosion.transform.position = collision.transform.position;
+        }
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
         }
     }
 

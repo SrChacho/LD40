@@ -27,15 +27,22 @@ public class Scrolling : MonoBehaviour {
 
         transform.position = new Vector3(transform.position.x - speed * GameManager.instance.gameSpeed, transform.position.y, transform.position.z);
 
-        if(transform.position.x < limit && teleportBack)
+        if(transform.position.x < limit)
         {
-            if (!randomVariance)
+            if (teleportBack)
             {
-                transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+                if (!randomVariance)
+                {
+                    transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+                }
+                else
+                {
+                    transform.position = new Vector3(Random.Range(newX - minRandom, newX + maxRandom), transform.position.y, transform.position.z);
+                }
             }
             else
             {
-                transform.position = new Vector3(Random.Range(newX - minRandom, newX + maxRandom), transform.position.y, transform.position.z);
+                Destroy(gameObject);
             }
         }
 

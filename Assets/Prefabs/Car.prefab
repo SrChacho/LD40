@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.4
-  limit: -15
+  limit: -25
   newX: 25
   teleportBack: 0
   randomVariance: 0
