@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour {
         Destroy(player.gameObject);
         GameObject cupInstance = Instantiate(cup, pos, new Quaternion(0,0,0,0));
         cupInstance.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 20, ForceMode2D.Impulse);
-        Invoke("StopGame", 1.12f);
+        Invoke("StopGame", 1.07f);
     }
 
     void StopGame(){
