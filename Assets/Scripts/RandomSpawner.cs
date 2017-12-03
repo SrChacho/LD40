@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class RandomSpawner : MonoBehaviour {
 
-    public GameObject prefab;
-    //public float speed = 1;
-    //public float limit;
+    public List<GameObject> enemies = new List<GameObject>();
+
     public float firstInvokeTime = 0;
     public float newX;
     public float minTime = 0.3f;
@@ -17,27 +16,23 @@ public class RandomSpawner : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Invoke("Spawn", firstInvokeTime);
+        InvokeRepeating("Spawn", firstInvokeTime, Random.Range(minTime, maxTime));
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		if(GameManager.instance.gameSpeed == 0){
+			CancelInvoke();
+		}
     }
 
     void Spawn()
     {
-        if(GameManager.instance.gameSpeed > 0)
-        {
-            if (!randomVariance)
-            {
-                Instantiate(prefab, new Vector3(newX, transform.position.y, transform.position.z), transform.rotation);
-            }
-            else
-            {
-                Instantiate(prefab, new Vector3(Random.Range(newX - minPosRandom, newX + maxPosRandom), transform.position.y, transform.position.z), transform.rotation);
-            }
-            Invoke("Spawn", Random.Range(minTime, maxTime));
-        }
+        float chance = Random.Range(0f, 1f);
+		if(chance < 0.4f){
+			Instantiate(enemies[0], new Vector2(20, -1), this.transform.rotation);
+		}else{
+			Instantiate(enemies[Random.Range(1, enemies.Count)], new Vector2(20, -2.63f), this.transform.rotation);
+		}
     }
 }
