@@ -56,14 +56,13 @@ public class Collectible : MonoBehaviour {
             if(itemType == ItemType.coin)
             {
                 GameManager.instance.ChangeScore(givenScore);
-                collision.transform.parent.GetComponent<AudioSource>().PlayOneShot(pickupSound, audioVolume);
                 GameManager.instance.gameSpeed += 0.025f;
             }
             else if(itemType == ItemType.inmune)
             {
                 Player.instance.MakeInmune(5.85f);
             }
-            
+            collision.transform.parent.GetComponent<AudioSource>().PlayOneShot(pickupSound, audioVolume);
             Destroy(gameObject);
         }
     }
