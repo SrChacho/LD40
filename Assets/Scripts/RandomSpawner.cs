@@ -16,7 +16,7 @@ public class RandomSpawner : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        InvokeRepeating("Spawn", firstInvokeTime, Random.Range(minTime, maxTime));
+        Invoke("Spawn", firstInvokeTime);
 	}
 	
 	// Update is called once per frame
@@ -34,5 +34,7 @@ public class RandomSpawner : MonoBehaviour {
 		}else{
 			Instantiate(enemies[Random.Range(1, enemies.Count)], new Vector2(20, -2.63f), this.transform.rotation);
 		}
+
+        Invoke("Spawn", Random.Range(minTime, maxTime));
     }
 }
