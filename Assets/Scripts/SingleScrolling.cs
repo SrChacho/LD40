@@ -10,7 +10,7 @@ public float newX = 20;
 
  private void Update()
     {
-        //constantly moving
+        //El elemento se mueve constantemente en eje x y si supera un limite se reseta a la posicion original
         transform.position = new Vector3(transform.position.x - speed * GameManager.instance.gameSpeed, transform.position.y, transform.position.z);
 
         if(transform.position.x < limit){

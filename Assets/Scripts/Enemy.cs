@@ -37,6 +37,7 @@ public class Enemy : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Player" )
         {
+            //Comportaminetos cuando el jugador choca con un vehiculo según si es inmune o no
             if (Player.instance.inmune)
             {
                 GameObject explosion = Instantiate(explosionPrefab);

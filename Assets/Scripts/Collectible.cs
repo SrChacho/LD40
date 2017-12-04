@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Collectible : MonoBehaviour {
-
+    //Tipos de objetos
     public enum ItemType
     {
         coin,
@@ -43,6 +43,7 @@ public class Collectible : MonoBehaviour {
     {
         if(collision.tag == "Player")
         {
+            //Comportamiento al recoger el objeto segun si te hace inmune o no
             if(itemType == ItemType.coin)
             {
                 GameManager.instance.ChangeScore(givenScore);

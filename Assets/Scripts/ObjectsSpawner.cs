@@ -30,9 +30,10 @@ public class ObjectsSpawner : MonoBehaviour {
     {
 		float chance = Random.Range(0f, 1f);
 		if(chance < 0.1f){
-			//Inmune Objects
+			//Instancio objetos que hacen al personaje inmune
 			Instantiate(objects[Random.Range(0,2)], positions[Random.Range(0, positions.Length)], this.transform.rotation);
 		}else{
+			//Instancio un objeto NO inmune
 			Instantiate(objects[Random.Range(2, objects.Count)], positions[Random.Range(0, positions.Length)], this.transform.rotation);
 		}
 		

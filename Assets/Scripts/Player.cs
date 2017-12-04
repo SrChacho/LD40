@@ -72,8 +72,6 @@ public class Player : MonoBehaviour {
             if (Grounded())
             {
                 holdingCrouch = true;
-                //rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-                //crouchTimer = 0.25f;
                 animator.SetBool("Crouching", true);
                 sparksParticles.Play();
 
@@ -108,6 +106,7 @@ public class Player : MonoBehaviour {
 
     public void MakeInmune(float time)
     {
+        //Hago al personaje inmune
         CancelInvoke("FinishInmune");
         inmune = true;
         immuneText.SetActive(true);
@@ -117,7 +116,8 @@ public class Player : MonoBehaviour {
         Invoke("FinishInmune", time);
     }
     void FinishInmune()
-    {
+    {  
+        //Devuelvo al pesronaje al estado original
         inmune = false;
         immuneText.SetActive(false);
         MusicManager.instance.ChangeMusic(MusicManager.instance.levelMusic);

@@ -10,7 +10,7 @@ public class ScrollingManager : MonoBehaviour {
 	public List<GameObject> houses = new List<GameObject>();
 
 	void Start(){
-		//Instantiate two first houses
+		//Instancio las dos primeras casas y luego cada 2 segundos instancio una casa a la derecha de la camara
 		Instantiate( houses[Random.Range(0, houses.Count)], new Vector2(0,y), new Quaternion(0,0,0,0));
 		Instantiate( houses[Random.Range(0, houses.Count)], new Vector2(newX,y), new Quaternion(0,0,0,0));
 		InvokeRepeating("SpawnHouse", 2f, 2f);
@@ -18,12 +18,14 @@ public class ScrollingManager : MonoBehaviour {
 
 	void Update()
 	{
+		//Si la velocidad de juego es 0 detengo el spawn de casas
 		if(GameManager.instance.gameSpeed == 0){
 			CancelInvoke();
 		}
 	}
 
 	public void SpawnHouse(){
+		//Instancio una casa random
 		Instantiate(houses[Random.Range(0, houses.Count)], new Vector2(newX, y), new Quaternion(0,0,0,0));
 	}
 }

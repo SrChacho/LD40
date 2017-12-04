@@ -8,27 +8,21 @@ public class Timer : MonoBehaviour {
 	float time = 0;
 	int seconds = 0;
 	int minutes = 0;
-	public float totalTime;
 
 	string text; 
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		totalTime = Time.deltaTime * GameManager.instance.gameSpeed;
 		time += Time.deltaTime * GameManager.instance.gameSpeed;
 		seconds = (int)time;
-
+		//Reset de los segundos sumando 1 a los minutos
 		if(seconds >= 60){
 			minutes ++;
 			seconds = 0;
 			time = 0;
 		}
-
+		//Formato de texto del timer
 		if(seconds < 10){
 			text = minutes + ":0" + seconds;
 		}

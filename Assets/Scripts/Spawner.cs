@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour {
 
+	//Lista de objectos que se pueden coger
 	public List<GameObject> objects = new List<GameObject>();
+
+	//Lista de vehiculos
 	public List<GameObject> enemies = new List<GameObject>();
+
+	//Posiciones en las que puede spawnear un objeto
 	public Vector2[] pos;
+
+	//Tiempo máximo y minimo para el spawn de elementos en el juego
 	public float minTime = 0.3f;
     public float maxTime = 4f;
+	//Determina con true o false si en la posición hay instanciado algo
 	public bool[] instances;
 	float firstInvokeTime = 3;
 
 	// Use this for initialization
     void Start () {
+		//Comienzan las oleadas de enemigos y objetos
         InvokeRepeating("Spawn", firstInvokeTime, Random.Range(minTime, maxTime));
 	}
 
 	void Update(){
+		//Si el tiempo de juego esta parado, detengo el spawn de oleadas
 		if(GameManager.instance.gameSpeed == 0){
 			CancelInvoke();
 		}
