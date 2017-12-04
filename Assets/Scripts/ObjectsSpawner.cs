@@ -8,8 +8,8 @@ public class ObjectsSpawner : MonoBehaviour {
 	public Vector2[] positions; 
     public float firstInvokeTime = 0;
     public float newX;
-    public float minTime = 1.2f;
-    public float maxTime = 5f;
+    public float minTime = 3f;
+    public float maxTime = 8f;
     public bool randomVariance = false;
     public float minPosRandom = 5;
     public float maxPosRandom = 5;

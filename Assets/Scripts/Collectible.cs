@@ -46,7 +46,7 @@ public class Collectible : MonoBehaviour {
             if(itemType == ItemType.coin)
             {
                 GameManager.instance.ChangeScore(givenScore);
-                GameManager.instance.gameSpeed += 0.025f;
+                GameManager.instance.gameSpeed += 0.001f;
             }
             else if(itemType == ItemType.inmune)
             {
