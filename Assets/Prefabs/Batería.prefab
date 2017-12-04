@@ -82,7 +82,7 @@ MonoBehaviour:
   limit: -10
   givenScore: 1
   pickupSound: {fileID: 8300000, guid: 85afc6444c0a82d418ac18dd35998c67, type: 3}
-  audioVolume: 0.61
+  audioVolume: 0.5
   itemType: 1
 --- !u!212 &212717235117836580
 SpriteRenderer:
