@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour {
             {
                 GameObject explosion = Instantiate(explosionPrefab);
                 explosion.transform.position = collision.transform.position;
-                explosion.transform.localScale = new Vector3(15, 15, 1);
+                explosion.transform.GetChild(0).localScale = new Vector3(2.5f, 2.5f, 1);
                 Destroy(gameObject);
             }
             else if (!Player.instance.inmune)

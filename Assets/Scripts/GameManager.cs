@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour {
 
         //Tiempo total desde que el nivel empezó
         int timeScore = (int)Time.timeSinceLevelLoad;
-        totalScore = timeScore / 10 + score * 10;
+        totalScore = timeScore / 4 + score * 10;
         gameOverText.text = "your score: " + totalScore;
         gameOverPanel.SetActive(true);
 
