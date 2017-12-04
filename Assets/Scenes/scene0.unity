@@ -5594,8 +5594,8 @@ MonoBehaviour:
   - {x: 20, y: 2}
   firstInvokeTime: 0
   newX: 15
-  minTime: 1
-  maxTime: 4
+  minTime: 2.5
+  maxTime: 6
   randomVariance: 0
   minPosRandom: 5
   maxPosRandom: 5
