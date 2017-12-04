@@ -33,7 +33,7 @@ public class ObjectsSpawner : MonoBehaviour {
 			//Inmune Objects
 			Instantiate(objects[Random.Range(0,2)], positions[Random.Range(0, positions.Length)], this.transform.rotation);
 		}else{
-			Instantiate(objects[Random.Range(3, objects.Count)], positions[Random.Range(0, positions.Length)], this.transform.rotation);
+			Instantiate(objects[Random.Range(2, objects.Count)], positions[Random.Range(0, positions.Length)], this.transform.rotation);
 		}
 		
 	}
