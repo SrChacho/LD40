@@ -1288,8 +1288,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 409460506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 282, y: 158.5, z: 0}
-  m_LocalScale: {x: 0.440625, y: 0.440625, z: 0.440625}
+  m_LocalPosition: {x: 800, y: 450, z: 0}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children:
   - {fileID: 1354793256}
   - {fileID: 587247379}
@@ -4972,7 +4972,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 587247378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -610, y: 339.7163, z: 0}
+  m_LocalPosition: {x: -610, y: 340, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 409460510}
@@ -5668,8 +5668,8 @@ MonoBehaviour:
   - {x: 20, y: 2}
   firstInvokeTime: 0
   newX: 15
-  minTime: 2.5
-  maxTime: 6
+  minTime: 1.5
+  maxTime: 4
   randomVariance: 0
   minPosRandom: 5
   maxPosRandom: 5
@@ -9811,7 +9811,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1354793255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 339.7163, z: 0}
+  m_LocalPosition: {x: 0, y: 340, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 409460510}
@@ -10386,7 +10386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  gameSpeed: 1
+  gameSpeed: 0.9
   scoreText: {fileID: 587247380}
   gameOverPanel: {fileID: 671031559}
   gameOverText: {fileID: 99092294}
