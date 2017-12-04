@@ -884,8 +884,8 @@ MonoBehaviour:
   - {fileID: 1792530691094760, guid: 5b71c6da9ca0e4b458aa14114acd3eb2, type: 2}
   firstInvokeTime: 3
   newX: 20
-  minTime: 1.5
-  maxTime: 7
+  minTime: 1
+  maxTime: 6
   randomVariance: 0
   minPosRandom: 0
   maxPosRandom: 0
