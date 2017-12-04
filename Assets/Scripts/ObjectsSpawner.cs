@@ -30,9 +30,10 @@ public class ObjectsSpawner : MonoBehaviour {
     {
 		float chance = Random.Range(0f, 1f);
 		if(chance < 0.1f){
-			Instantiate(objects[0], positions[Random.Range(0, positions.Length)], this.transform.rotation);
+			//Inmune Objects
+			Instantiate(objects[Random.Range(0,2)], positions[Random.Range(0, positions.Length)], this.transform.rotation);
 		}else{
-			Instantiate(objects[Random.Range(1, objects.Count)], positions[Random.Range(0, positions.Length)], this.transform.rotation);
+			Instantiate(objects[Random.Range(3, objects.Count)], positions[Random.Range(0, positions.Length)], this.transform.rotation);
 		}
 		
 	}
