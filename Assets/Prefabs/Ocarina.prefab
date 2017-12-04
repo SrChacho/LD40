@@ -81,7 +81,7 @@ MonoBehaviour:
   speed: 0.2
   limit: -10
   givenScore: 1
-  pickupSound: {fileID: 8300000, guid: a26b54d94ce709d4a9ff12302a342669, type: 3}
+  pickupSound: {fileID: 8300000, guid: 874ca06011e645a4ab363d0328bd5316, type: 3}
   audioVolume: 0.65
   itemType: 0
 --- !u!212 &212257394280101836

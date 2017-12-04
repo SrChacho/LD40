@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+    public GameObject immuneText;
     public static Player instance;
     public float jumpForce = 1;
     public ParticleSystem sparksParticles;
@@ -109,6 +110,7 @@ public class Player : MonoBehaviour {
     {
         CancelInvoke("FinishInmune");
         inmune = true;
+        immuneText.SetActive(true);
         MusicManager.instance.ChangeMusic(MusicManager.instance.inmuneMusic);
         inmuneParticles.Play();
         print("Inmune started for " + time);
@@ -117,6 +119,7 @@ public class Player : MonoBehaviour {
     void FinishInmune()
     {
         inmune = false;
+        immuneText.SetActive(false);
         MusicManager.instance.ChangeMusic(MusicManager.instance.levelMusic);
         inmuneParticles.Stop();
         print("Inmune finished");
