@@ -37,10 +37,17 @@ public class Enemy : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Player" )
         {
-            GameObject explosion = Instantiate(explosionPrefab);
-            explosion.transform.position = collision.transform.position;
-            if (!Player.instance.inmune)
+            if (Player.instance.inmune)
             {
+                GameObject explosion = Instantiate(explosionPrefab);
+                explosion.transform.position = collision.transform.position;
+                explosion.transform.localScale = new Vector3(15, 15, 1);
+                Destroy(gameObject);
+            }
+            else if (!Player.instance.inmune)
+            {
+                GameObject explosion = Instantiate(explosionPrefab);
+                explosion.transform.position = collision.transform.position;
                 GameManager.instance.GameOver();
             }
         }

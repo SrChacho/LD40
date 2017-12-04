@@ -68,7 +68,7 @@ public class Player : MonoBehaviour {
 
         if (Input.GetButtonDown("Crouch") )
         {
-            rb2d.gravityScale = 9;
+            rb2d.gravityScale = 12; //9
             if (Grounded())
             {
                 holdingCrouch = true;
